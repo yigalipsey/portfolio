@@ -45,7 +45,7 @@ export const BackgroundContainer = ({
       <div className="relative w-full border-x border-zinc-400 dark:border-zinc-700">
         <Ellipses />
         {/* Removed mx-auto, max-w-2xl, px-6. Kept py paddings. */}
-        <div className="relative z-20 py-12 sm:py-24">{children}</div>
+        <div className="relative    ">{children}</div>
       </div>
     </div>
   </div>

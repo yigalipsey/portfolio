@@ -8,7 +8,7 @@ const BLUR_FADE_DELAY = 0.04;
 export const WorkSection = () => {
   return (
     <section id="work">
-      <div className="flex min-h-0 flex-col gap-y-3">
+      <div className="flex mt-5 min-h-0 flex-col gap-y-3">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <h2 className="text-xl font-bold">Work Experience</h2>
         </BlurFade>

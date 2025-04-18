@@ -7,7 +7,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export const AboutSection = () => {
   return (
-    <section id="about">
+    <section className=" w-[90%] py-6 mx-auto" id="about">
       <BlurFade delay={BLUR_FADE_DELAY * 3}>
         <h2 className="text-xl font-bold">About</h2>
       </BlurFade>

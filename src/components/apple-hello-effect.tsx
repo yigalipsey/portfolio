@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export interface NameWriteEffectProps {
   /** גורם להכפלת משך האנימציה (גדול = איטי יותר) */
@@ -24,25 +25,40 @@ export const NameWriteEffect: React.FC<NameWriteEffectProps> = ({
   onAnimationComplete,
   className,
 }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 638 201"
-    fill="none"
-    className={className ?? "h-24 w-auto"}
+  <div
+    className={cn(
+      "relative mt-5 py-16 flex justify-center items-center",
+      className
+    )}
   >
-    <motion.path
-      d={combinedPathData.trim()}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={14.8883}
-      strokeLinecap="round"
-      initial={{ pathLength: 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{
-        duration: 2 * speed,
-        ease: "easeInOut",
-      }}
-      onAnimationComplete={onAnimationComplete}
+    <div
+      className={cn(
+        "absolute inset-0 opacity-80",
+        "[background-size:15px_15px]",
+        "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+        "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+      )}
     />
-  </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 638 201"
+      fill="none"
+      className="relative z-10 h-14 md:h-20 w-auto"
+    >
+      <motion.path
+        d={combinedPathData.trim()}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={14.8883}
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{
+          duration: 2 * speed,
+          ease: "easeInOut",
+        }}
+        onAnimationComplete={onAnimationComplete}
+      />
+    </svg>
+  </div>
 );
