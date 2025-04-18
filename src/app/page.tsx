@@ -8,6 +8,7 @@ import { SkillsSection } from "@/components/sections/skills-section";
 import { WorkSection } from "@/components/sections/work-section";
 import { NameWriteEffect } from "@/components/apple-hello-effect";
 import { DotDivider } from "@/components/dot-divider";
+import { DetailedContact } from "@/components/sections/detailed-contact";
 
 // Keep BLUR_FADE_DELAY here if sections need it as a prop,
 // or remove if defined within each section component.
@@ -21,6 +22,10 @@ export default function Page() {
       </div>
       <HeroSection />
       <DotDivider hideTopBorder={true} />
+      <div className="w-[90%] py-6 mx-auto">
+        <DetailedContact />
+      </div>
+      <DotDivider />
       <div className="w-[90%] py-6 mx-auto">
         <AboutSection />
       </div>
