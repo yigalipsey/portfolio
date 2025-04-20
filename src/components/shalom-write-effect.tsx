@@ -24,38 +24,31 @@ export const ShalomWriteEffect: React.FC<WriteEffectProps> = ({
   onAnimationComplete,
   className,
 }) => (
-  <div
-    className={cn(
-      "relative mt-5 py-16 flex justify-center items-center",
-      className
-    )}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 407 217"
+    fill="none"
+    className={cn("w-full h-auto", className)}
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 407 217"
-      fill="none"
-      className="relative z-10 h-14 md:h-20 w-auto"
-    >
-      {shalomPaths.map((d, i) => (
-        <motion.path
-          key={i}
-          d={d}
-          stroke="currentColor"
-          strokeWidth={14.8883}
-          // נתחיל עם קו ללא round־cap, כדי שלא יראו נקודה
-          initial={{ pathLength: 0, strokeLinecap: "butt" }}
-          // נעבור ל־round רק כשהקו מתגלה
-          animate={{ pathLength: 1, strokeLinecap: "round" }}
-          transition={{
-            delay: i * 0.4 * speed,
-            duration: 0.8 * speed,
-            ease: "easeInOut",
-          }}
-          onAnimationComplete={
-            i === shalomPaths.length - 1 ? onAnimationComplete : undefined
-          }
-        />
-      ))}
-    </svg>
-  </div>
+    {shalomPaths.map((d, i) => (
+      <motion.path
+        key={i}
+        d={d}
+        stroke="currentColor"
+        strokeWidth={14.8883}
+        // נתחיל עם קו ללא round־cap, כדי שלא יראו נקודה
+        initial={{ pathLength: 0, strokeLinecap: "butt" }}
+        // נעבור ל־round רק כשהקו מתגלה
+        animate={{ pathLength: 1, strokeLinecap: "round" }}
+        transition={{
+          delay: i * 0.4 * speed,
+          duration: 0.8 * speed,
+          ease: "easeInOut",
+        }}
+        onAnimationComplete={
+          i === shalomPaths.length - 1 ? onAnimationComplete : undefined
+        }
+      />
+    ))}
+  </svg>
 );

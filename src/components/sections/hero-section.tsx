@@ -1,25 +1,13 @@
 // components/sections/hero-section.tsx
-"use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import { CheckCircle2 } from "lucide-react";
-import TypingText from "@/components/magicui/typing-text";
+import TextFlip from "@/components/magicui/text-flip";
 import { AvailableButton } from "@/components/available-button";
 
 export function HeroSection() {
-  // State to control the visibility of TypingText
-  const [showTypingText, setShowTypingText] = useState(false);
-
-  // Effect to trigger the visibility after a delay
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowTypingText(true);
-    }, 2000); // 2000ms = 2 seconds delay
-    return () => clearTimeout(timer); // Cleanup timer on unmount
-  }, []); // Empty dependency array ensures this runs only once
-
   return (
     <section id="hero">
       <div
@@ -65,17 +53,9 @@ export function HeroSection() {
           </div>
 
           {/* שורה 3 - Removed flex-1 to allow natural height */}
-          <div className="flex items-center px-4 text-muted-foreground min-h-[2.5em]">
-            {/* Conditionally render TypingText based on state */}
-            {showTypingText && (
-              <TypingText
-                text={DATA.description}
-                className="w-full text-base lg:text-lg font-sans"
-                repeat={false}
-                delay={150}
-                hideCursorOnComplete={true}
-              />
-            )}
+          <div className="flex items-center px-4 text-muted-foreground pb-1">
+            {/* Replaced TypingText with TextFlip */}
+            <TextFlip />
           </div>
         </div>
       </div>

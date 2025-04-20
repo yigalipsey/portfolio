@@ -196,3 +196,26 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     opacity: 0;
   }
 }
+
+@keyframes flip-words {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-100%); /* Show word 2 */
+  }
+  50% {
+    transform: translateY(-200%); /* Show word 3 */
+  }
+  75% {
+    transform: translateY(-200%); /* Stay on word 3 */
+  }
+}
+
+.animate-flip-words {
+  animation: flip-words 20s infinite; /* Increased duration again */
+  animation-delay: 1.5s; /* Added delay */
+  /* Ensure spans are block or inline-block if transform isn't working as expected */
+  display: block; /* Or inline-block */
+}

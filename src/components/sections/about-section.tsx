@@ -7,12 +7,12 @@ const BLUR_FADE_DELAY = 0.04;
 
 export const AboutSection = () => {
   return (
-    <section className="  " id="about">
+    <section className="  py-6 " id="about">
       <BlurFade delay={BLUR_FADE_DELAY * 3}>
-        <h2 className="text-xl font-bold">About</h2>
+        <h2 className="text-xl font-bold">About me</h2>
       </BlurFade>
       <BlurFade delay={BLUR_FADE_DELAY * 4}>
-        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+        <Markdown className="prose mt-1 max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
           {DATA.summary}
         </Markdown>
       </BlurFade>
