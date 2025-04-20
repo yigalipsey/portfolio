@@ -10,7 +10,7 @@ export const DATA = {
   description: "Full Stack Developer",
   summary:
     "I completed my studies as a software engineering technician and expanded my knowledge through various online courses. I'm passionate about technology and dedicate time daily to learning and refining my skills. Occasionally, I participate in hackathons to challenge myself and sharpen my abilities. I focus on software architecture, performance optimization, and writing clean, maintainable code, always striving to stay ahead in the industry.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.avif",
   skills: [
     "React",
     "Next.js",
