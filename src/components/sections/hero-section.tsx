@@ -1,13 +1,25 @@
 // components/sections/hero-section.tsx
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import { CheckCircle2 } from "lucide-react";
-import { HyperText } from "@/components/magicui/hyper-text";
+import TypingText from "@/components/magicui/typing-text";
+import { AvailableButton } from "@/components/available-button";
 
 export function HeroSection() {
+  // State to control the visibility of TypingText
+  const [showTypingText, setShowTypingText] = useState(false);
+
+  // Effect to trigger the visibility after a delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTypingText(true);
+    }, 2000); // 2000ms = 2 seconds delay
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []); // Empty dependency array ensures this runs only once
+
   return (
     <section id="hero">
       <div
@@ -39,29 +51,31 @@ export function HeroSection() {
             divide-y divide-zinc-400 dark:divide-zinc-800
           "
         >
-          {/* שורה 1 - Ensure equal height using flex-1 */}
-          <div className="flex-1 flex items-center px-4 text-muted-foreground">
-            Available for work
+          {/* שורה 1 - Changed items-center to items-end */}
+          <div className="flex-1 flex items-end justify-start px-4 pt-2 pb-1">
+            <AvailableButton />
           </div>
 
-          {/* שורה 2 - Ensure equal height using flex-1 */}
-          <div className="flex-1 flex items-center px-4 gap-2">
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
+          {/* שורה 2 - Removed flex-1 to allow natural height */}
+          <div className="flex items-center  px-4 gap-2">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
               {DATA.name}
             </h1>
             <CheckCircle2 size={24} className="text-blue-500" />
           </div>
 
-          {/* שורה 3 - Ensure equal height using flex-1 */}
-          <div className="flex-1 flex items-center px-4 text-muted-foreground">
-            <HyperText
-              as="p"
-              className="w-full text-base lg:text-lg"
-              startOnView
-              delay={0.08}
-            >
-              {DATA.description}
-            </HyperText>
+          {/* שורה 3 - Removed flex-1 to allow natural height */}
+          <div className="flex items-center px-4 text-muted-foreground min-h-[2.5em]">
+            {/* Conditionally render TypingText based on state */}
+            {showTypingText && (
+              <TypingText
+                text={DATA.description}
+                className="w-full text-base lg:text-lg font-sans"
+                repeat={false}
+                delay={150}
+                hideCursorOnComplete={true}
+              />
+            )}
           </div>
         </div>
       </div>

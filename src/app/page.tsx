@@ -9,50 +9,86 @@ import { WorkSection } from "@/components/sections/work-section";
 import { NameWriteEffect } from "@/components/apple-hello-effect";
 import { DotDivider } from "@/components/dot-divider";
 import { DetailedContact } from "@/components/sections/detailed-contact";
+import BlurFade from "@/components/magicui/blur-fade";
 
-// Keep BLUR_FADE_DELAY here if sections need it as a prop,
-// or remove if defined within each section component.
-// For now, assuming it's defined within each section.
+// Define the delay constant
+const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col  mx-auto  max-w-[600px] min-h-[100dvh] ">
-      <div className="w-full 0">
-        <NameWriteEffect speed={1.2} />
-      </div>
-      <HeroSection />
-      <DotDivider hideTopBorder={true} />
-      <div className="w-[90%] py-6 mx-auto">
-        <DetailedContact />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <AboutSection />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <WorkSection />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <EducationSection />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <SkillsSection />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <ProjectsSection />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <HackathonsSection />
-      </div>
-      <DotDivider />
-      <div className="w-[90%] py-6 mx-auto">
-        <ContactSection />
-      </div>
+    <main className="flex flex-col mx-auto max-w-[600px] min-h-[100dvh]">
+      <BlurFade delay={BLUR_FADE_DELAY * 0}>
+        <div className="w-full">
+          <NameWriteEffect speed={1.8} />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 1}>
+        <HeroSection />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 1.5}>
+        <DotDivider hideTopBorder={true} />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 8}>
+        <div className="w-[90%] py-3 mx-auto">
+          <DetailedContact />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 2.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 3}>
+        <div className="w-[90%] py-3 mx-auto">
+          <AboutSection />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 3.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 4}>
+        <div className="w-[90%] py-3 mx-auto">
+          <WorkSection />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 5}>
+        <div className="w-[90%] py-3 mx-auto">
+          <EducationSection />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 6}>
+        <div className="w-[90%] py-3 mx-auto">
+          <SkillsSection />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 6.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 7}>
+        <div className="w-[90%] py-3 mx-auto">
+          <ProjectsSection />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 7.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 8}>
+        <div className="w-[90%] py-3 mx-auto">
+          <HackathonsSection />
+        </div>
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 8.5}>
+        <DotDivider />
+      </BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 9}>
+        <div className="w-[90%] py-3 mx-auto">
+          <ContactSection />
+        </div>
+      </BlurFade>
     </main>
   );
 }

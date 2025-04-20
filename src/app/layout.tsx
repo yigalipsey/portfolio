@@ -5,12 +5,21 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import {
+  JetBrains_Mono as FontSans,
+  Roboto_Condensed as FontHeading,
+} from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontHeading = FontHeading({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-heading",
 });
 
 export const metadata: Metadata = {
@@ -59,10 +68,11 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontHeading.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
             <BackgroundContainer>
               {children}
