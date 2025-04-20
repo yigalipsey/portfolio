@@ -7,7 +7,7 @@ export default function TextFlip() {
   const words = useMemo(
     () => [
       "Full Stack Developer",
-      "Designer",
+      "Web Designer",
       "Problem Solver",
       "Full Stack Developer",
     ],
