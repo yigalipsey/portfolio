@@ -13,7 +13,7 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col mx-auto max-w-[600px] min-h-[100dvh]">
+    <main className="flex flex-col mx-auto md:border-x  max-w-[600px] min-h-[100dvh]">
       <BlurFade delay={BLUR_FADE_DELAY * 0}>
         <div className="w-full  ">
           <NameWriteEffect speed={1.8} />

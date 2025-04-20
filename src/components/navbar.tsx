@@ -50,12 +50,7 @@ export default function Navbar() {
                       "size-12"
                     )}
                   >
-                    <social.icon
-                      className="size-4"
-                      style={
-                        name === "WhatsApp" ? { filter: "grayscale(1)" } : {}
-                      }
-                    />
+                    <social.icon className="size-5" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>

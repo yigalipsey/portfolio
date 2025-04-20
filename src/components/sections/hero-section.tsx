@@ -1,9 +1,9 @@
 // components/sections/hero-section.tsx
 
 import React from "react";
+import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
-import { CheckCircle2 } from "lucide-react";
 import TextFlip from "@/components/magicui/text-flip";
 import { AvailableButton } from "@/components/available-button";
 
@@ -45,11 +45,27 @@ export function HeroSection() {
           </div>
 
           {/* שורה 2 - Removed flex-1 to allow natural height */}
-          <div className="flex items-center  px-4 gap-2">
+          <div className="flex   items-center px-4 gap-1">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
               {DATA.name}
             </h1>
-            <CheckCircle2 size={24} className="text-blue-500" />
+            {/* Inlined SVG Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              width={24}
+              height={24}
+              className="inline-block ml-1 mt-1"
+            >
+              <polygon
+                className="fill-blue-700"
+                points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"
+              />
+              <polygon
+                fill="#fff"
+                points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"
+              />
+            </svg>
           </div>
 
           {/* שורה 3 - Removed flex-1 to allow natural height */}
