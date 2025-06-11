@@ -5,7 +5,7 @@ export const DATA = {
   name: "Yigal Lipsey",
   initials: "DV",
   url: "https://www.yigalipsey.com",
-  location: "Bangkok,Thailand",
+  location: "Tel Aviv,Israel",
   locationLink: "https://www.google.com/maps/place/Bangkok,+Thailand",
   description: "Full Stack Developer",
   summary:
@@ -103,7 +103,7 @@ export const DATA = {
       technologies: ["Next.js", "TailwindCSS", "pusher-js", "next-auth"],
       links: [
         {
-          type: "Website",
+          type: "Web App",
           href: "https://my-dating-app-chi.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
@@ -114,6 +114,54 @@ export const DATA = {
         },
       ],
       image: "/BlindLove.png",
+    },
+    {
+      title: "Frontend Fantasy",
+      href: "https://frontend-fantasy.vercel.app/",
+      active: true,
+      description:
+        "Select your dream squad within a fixed budget, make strategic transfers each gameweek, and track your real-time score based on actual player performances.",
+      technologies: ["Next.js", "TailwindCSS", "TypeScript"],
+      links: [
+        {
+          type: "Web App",
+          href: "https://frontend-fantasy.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/fantasy.png",
+    },
+    {
+      title: "Fitness App",
+      href: "https://www.yigalipsey-fittnes.com/",
+      active: true,
+      description:
+        "A comprehensive fitness application designed to help users track their workouts, set fitness goals, and maintain a healthy lifestyle with personalized training programs.",
+      technologies: ["Next.js", "TailwindCSS", "TypeScript"],
+      links: [
+        {
+          type: "Web App",
+          href: "https://www.yigalipsey-fittnes.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/fittnes.png",
+    },
+    {
+      title: "Tali Hadad Architecture",
+      href: "https://tali-hadad.vercel.app/",
+      active: true,
+      description:
+        "A modern, minimalist portfolio website for an Israeli architect based in Los Angeles. Showcases contemporary design projects, architectural services, and interior design expertise with a focus on creating unique, inspiring spaces that blend innovation with functionality.",
+      technologies: ["Next.js", "TailwindCSS", "TypeScript"],
+      links: [
+        {
+          type: "Website",
+          href: "https://tali-hadad.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/form.png",
     },
     {
       title: "Portfolio Website",
