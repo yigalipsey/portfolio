@@ -46,7 +46,7 @@ export function HeroSection() {
 
           {/* שורה 2 - Removed flex-1 to allow natural height */}
           <div className="flex   items-center px-4 gap-1">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
               {DATA.name}
             </h1>
             {/* Inlined SVG Icon */}

@@ -128,6 +128,11 @@ export const DATA = {
           href: "https://frontend-fantasy.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/yigalipsey/frontendFantasy",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "/fantasy.png",
     },
@@ -143,6 +148,11 @@ export const DATA = {
           type: "Web App",
           href: "https://www.yigalipsey-fittnes.com/",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/yigalipsey/frontendFittnesApp",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "/fittnes.png",
