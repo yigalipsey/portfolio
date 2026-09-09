@@ -16,7 +16,9 @@ export const DATA = {
     "Next.js",
     "Typescript",
     "Node.js",
+    "Nest.js",
     "Mongo db",
+    "SQL",
     "Supabase",
     "Vercel",
     "AiSdk",
@@ -95,67 +97,36 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Blind love",
-      href: "https://my-dating-app-chi.vercel.app/",
+      title: "TicketAgent",
+      href: "https://www.ticketagent.co.il/",
       active: true,
       description:
-        "A bilingual (English/Hebrew) dating application featuring real-time chat, high compatibility matching, and convenient Google login. Includes additional features designed to enhance the user experience.",
-      technologies: ["Next.js", "TailwindCSS", "pusher-js", "next-auth"],
+        "A real-time ticket aggregator for football matches and concerts abroad, built exclusively around verified Israeli ticket agencies. Pulls live inventory and pricing from multiple suppliers and compares it side by side, so buyers get full price transparency and Hebrew-language support instead of gambling on unfamiliar international sites.",
+      technologies: ["Next.js", "TailwindCSS", "TypeScript", "Cloudflare"],
       links: [
         {
           type: "Web App",
-          href: "https://my-dating-app-chi.vercel.app/",
+          href: "https://www.ticketagent.co.il/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/yigalipsey/my-dating-app",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "/BlindLove.png",
+      image: "/ticketagent.png",
     },
     {
-      title: "Frontend Fantasy",
-      href: "https://frontend-fantasy.vercel.app/",
+      title: "Kosher Hotels Israel",
+      href: "https://kosherhotelsisrael.com/",
       active: true,
       description:
-        "Select your dream squad within a fixed budget, make strategic transfers each gameweek, and track your real-time score based on actual player performances.",
-      technologies: ["Next.js", "TailwindCSS", "TypeScript"],
+        "A booking engine for kosher vacations in Israel, letting families search hotels by destination, dates and party size, then filter by kashrut level (Mehadrin, Glatt, Rabbanut). Handles the full flow end to end \u2014 room and board selection, secure checkout and emailed confirmation \u2014 with direct hotel pricing and no middlemen.",
+      technologies: ["React", "Vite", "TailwindCSS", "TypeScript"],
       links: [
         {
           type: "Web App",
-          href: "https://frontend-fantasy.vercel.app/",
+          href: "https://kosherhotelsisrael.com/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/yigalipsey/frontendFantasy",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "/fantasy.png",
-    },
-    {
-      title: "Fitness App",
-      href: "https://www.yigalipsey-fittnes.com/",
-      active: true,
-      description:
-        "A comprehensive fitness application designed to help users track their workouts, set fitness goals, and maintain a healthy lifestyle with personalized training programs.",
-      technologies: ["Next.js", "TailwindCSS", "TypeScript"],
-      links: [
-        {
-          type: "Web App",
-          href: "https://www.yigalipsey-fittnes.com/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/yigalipsey/frontendFittnesApp",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/fittnes.png",
+      image: "/kosherhotels.png",
     },
     {
       title: "Tali Hadad Architecture",
@@ -178,11 +149,11 @@ export const DATA = {
       href: "https://www.yoadlipsey.com/",
       active: true,
       description:
-        "Professional portfolio website showcasing voice-over talent. Features high-quality audio samples, service details, and contact information for potential clients.",
+        "Landing page for a professional voice-over artist. Features high-quality audio samples, service details, and contact information for potential clients.",
       technologies: ["Next.js", "TailwindCSS", "framer-motion"],
       links: [
         {
-          type: "Website",
+          type: "Landing Page",
           href: "https://www.yoadlipsey.com/",
           icon: <Icons.globe className="size-3" />,
         },
@@ -210,11 +181,11 @@ export const DATA = {
       href: "https://websitetomtk.vercel.app/",
       active: true,
       description:
-        "Sophisticated portfolio website for a furniture import business. Presents a curated collection of imported pieces, emphasizing quality, style, and global sourcing.",
+        "Sophisticated landing page for a furniture import business. Presents a curated collection of imported pieces, emphasizing quality, style, and global sourcing.",
       technologies: ["Next.js", "TailwindCSS", "framer-motion"],
       links: [
         {
-          type: "Website",
+          type: "Landing Page",
           href: "https://websitetomtk.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
