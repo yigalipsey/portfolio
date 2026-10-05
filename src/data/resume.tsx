@@ -110,23 +110,6 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "SalesLink",
-      href: "https://www.saleslink.co.il/",
-      active: true,
-      description:
-        "A sales-only job marketplace for the Israeli market, matching companies with independent sales agents and commission reps instead of a generic job board. Every agent and advertiser is manually verified to keep the listings spam-free, and a built-in AI assistant drafts job posts, agent profiles and search queries. Outreach stays direct and private between the two sides, with no intermediary taking a cut.",
-      technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vercel"],
-      links: [
-        {
-          type: "Web App",
-          href: "https://www.saleslink.co.il/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/saleslink.png",
-      video: "/saleslink-sting.mp4",
-    },
-    {
       title: "TicketAgent",
       href: "https://www.ticketagent.co.il/",
       active: true,
@@ -157,6 +140,23 @@ export const DATA = {
         },
       ],
       image: "/kosherhotels.png",
+    },
+    {
+      title: "SalesLink",
+      href: "https://www.saleslink.co.il/",
+      active: true,
+      description:
+        "A sales-only job marketplace for the Israeli market, matching companies with independent sales agents and commission reps instead of a generic job board. Every agent and advertiser is manually verified to keep the listings spam-free, and a built-in AI assistant drafts job posts, agent profiles and search queries. Outreach stays direct and private between the two sides, with no intermediary taking a cut.",
+      technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vercel"],
+      links: [
+        {
+          type: "Web App",
+          href: "https://www.saleslink.co.il/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/saleslink.png",
+      video: "/saleslink-sting.mp4",
     },
     {
       title: "Tali Hadad Architecture",
