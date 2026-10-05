@@ -39,6 +39,8 @@ export const ProjectsSection = () => {
                 description={project.description}
                 tags={project.technologies}
                 image={project.image}
+                video={project.video}
+                reel={project.reel}
                 links={project.links}
               />
             </BlurFade>

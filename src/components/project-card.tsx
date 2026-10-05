@@ -6,8 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { ProjectMedia, type ProjectReel } from "@/components/project-media";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -20,6 +19,7 @@ interface Props {
   link?: string;
   image?: string;
   video?: string;
+  reel?: ProjectReel;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -37,6 +37,7 @@ export function ProjectCard({
   link,
   image,
   video,
+  reel,
   links,
   className,
 }: Props) {
@@ -46,22 +47,16 @@ export function ProjectCard({
         "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
-      <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
-      >
-        {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={320}
-            height={160}
-            sizes="(max-width: 768px) 100vw, 320px"
-            quality={50}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
-        )}
-      </Link>
+      {image && (
+        <ProjectMedia
+          image={image}
+          alt={title}
+          href={href}
+          video={video}
+          reel={reel}
+          className={className}
+        />
+      )}
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>

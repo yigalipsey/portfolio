@@ -1,6 +1,19 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
+
+export interface Project {
+  title: string;
+  href: string;
+  active: boolean;
+  description: string;
+  technologies: string[];
+  links: { type: string; href: string; icon: React.ReactNode }[];
+  image?: string;
+  video?: string;
+  reel?: { href: string; title: string };
+}
+
 export const DATA = {
   name: "Yigal Lipsey",
   initials: "DV",
@@ -97,6 +110,23 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "SalesLink",
+      href: "https://www.saleslink.co.il/",
+      active: true,
+      description:
+        "A sales-only job marketplace for the Israeli market, matching companies with independent sales agents and commission reps instead of a generic job board. Every agent and advertiser is manually verified to keep the listings spam-free, and a built-in AI assistant drafts job posts, agent profiles and search queries. Outreach stays direct and private between the two sides, with no intermediary taking a cut.",
+      technologies: ["Next.js", "TailwindCSS", "TypeScript", "Vercel"],
+      links: [
+        {
+          type: "Web App",
+          href: "https://www.saleslink.co.il/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/saleslink.png",
+      video: "/saleslink-sting.mp4",
+    },
+    {
       title: "TicketAgent",
       href: "https://www.ticketagent.co.il/",
       active: true,
@@ -192,7 +222,27 @@ export const DATA = {
       ],
       image: "/tk.png",
     },
-  ],
+    {
+      title: "Bizcraft",
+      href: "https://www.bizcraftil.com/he",
+      active: true,
+      description:
+        "Site for an Israeli digital product and motion studio, positioned as the full wrapper for small businesses \u2014 they build the site, run the social and paid campaigns, and handle outbound. Bilingual Hebrew and English with a real RTL layout rather than a mirrored one, a WebGL hero, and scroll-driven motion through every section. Ships a Hebrew-first blog with per-article JSON-LD.",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Three.js", "Framer Motion"],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.bizcraftil.com/he",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/bizcraft.png",
+      reel: {
+        href: "https://www.instagram.com/reel/Dd9fvTqSX0h/",
+        title: "Studio reel on Instagram",
+      },
+    },
+  ] as Project[],
   hackathons: [
     {
       title: "Hack Western 5",
