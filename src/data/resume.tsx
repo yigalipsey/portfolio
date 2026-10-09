@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export interface Project {
   title: string;
-  href: string;
+  href?: string;
   active: boolean;
   description: string;
   technologies: string[];
@@ -224,22 +224,21 @@ export const DATA = {
     },
     {
       title: "Bizcraft",
-      href: "https://www.bizcraftil.com/he",
       active: true,
       description:
-        "Site for an Israeli digital product and motion studio, positioned as the full wrapper for small businesses \u2014 they build the site, run the social and paid campaigns, and handle outbound. Bilingual Hebrew and English with a real RTL layout rather than a mirrored one, a WebGL hero, and scroll-driven motion through every section. Ships a Hebrew-first blog with per-article JSON-LD.",
-      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Three.js", "Framer Motion"],
+        "Motion reel for an Israeli digital product and motion studio that wraps small businesses end to end \u2014 site, social and paid campaigns, outbound. Watch the video on Instagram.",
+      technologies: ["Motion Design", "Video"],
       links: [
         {
-          type: "Website",
-          href: "https://www.bizcraftil.com/he",
-          icon: <Icons.globe className="size-3" />,
+          type: "Watch video",
+          href: "https://www.instagram.com/reel/Dd9fvTqSX0h/",
+          icon: <Icons.play className="size-3" />,
         },
       ],
       image: "/bizcraft.png",
       reel: {
         href: "https://www.instagram.com/reel/Dd9fvTqSX0h/",
-        title: "Studio reel on Instagram",
+        title: "Video \u00b7 Instagram",
       },
     },
   ] as Project[],

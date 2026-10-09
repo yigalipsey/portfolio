@@ -76,10 +76,16 @@ export function ProjectMedia({ image, alt, href, video, reel, className }: Props
         />
       )}
       {reel && (
-        <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center gap-1.5 bg-gradient-to-t from-black/75 via-black/35 to-transparent px-2.5 pb-1.5 pt-7 text-[10px] font-medium text-white">
-          <Icons.play className="size-3 shrink-0" />
-          {reel.title}
-        </span>
+        <>
+          <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20">
+            <span className="flex size-12 items-center justify-center rounded-full bg-white/90 text-black shadow-lg">
+              <Icons.play className="size-5 translate-x-0.5" />
+            </span>
+          </span>
+          <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center gap-1.5 bg-gradient-to-t from-black/75 via-black/35 to-transparent px-2.5 pb-1.5 pt-7 text-[10px] font-medium text-white">
+            {reel.title}
+          </span>
+        </>
       )}
     </Link>
   );
